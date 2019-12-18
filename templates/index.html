@@ -126,7 +126,11 @@
 				<div class="col-md-8 col-md-offset-2 animate-box">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						<img src="{% static 'images/flaticon/svg/005-two.svg' %}" class="svg" alt="Toylike">
-						<h2>Жарылқасын</h2>
+                        {% if friend %}
+                            <h2>{{ friend }}</h2>
+                        {% else %}
+                            <h2>Досым</h2>
+                        {% endif %}
 						<p>Árbir ata-ana úshin balasynyń ómirde óz ornyn tapqanyn kórý úlken baqyt. Ulymyz Jarylqasyn kelinimiz Nurgúlge tabystyrǵan bul kún biz úshin erekshe bolmaq. Siz(der)di osy qýanyshymyzdyń qadirmendi qonaǵy bolýǵa shaqyramyz.</p>
 						<p><strong>on Dec 22, 2019 18:00 &mdash; Макатаева, 139​,ресторан "Atameken"</strong></p>
 					</div>
@@ -189,7 +193,6 @@
 				<div class="col-md-12">
 					<ul class="timeline animate-box">
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url({% static 'images/couple-1.jpg' %});"></div>
 							{% for blessing in blessings %}
 							    <div class="timeline-panel">
 								<div class="overlay"></div>
